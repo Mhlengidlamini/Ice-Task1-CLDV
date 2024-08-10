@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ABCRetail.ViewModel.ProductViewModel>
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock Level</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>@product.StockLevel</td>
+                <td>
+                    <a href="/Product/Edit/@product.Id">Edit</a> |
+                    <a href="/Product/Delete/@product.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Product")">Create New Product</a>
+

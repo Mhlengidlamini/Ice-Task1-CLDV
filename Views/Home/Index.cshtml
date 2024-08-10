@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Retail - Product Highlights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        .product-card p {
+            font-size: 1.2rem;
+            color: #555;
+            padding: 0 10px;
+        }
+        .product-card .price {
+            font-size: 1.4rem;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        .product-card .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            margin: 15px 0;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .product-card .button:hover {
+            background: #c0392b;
+        }
+        .promotion-banner {
+            background: #e74c3c;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Featured Products & Collections</h2>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Christmas Decoration Set</h3>
+            <p>Bring holiday cheer to your home with our exclusive Christmas decoration set.</p>
+            <p class="price">R49.99</p>
+            <a href="#" class="button">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Winter Apparel Collection</h3>
+            <p>Stay warm and stylish this winter with our new apparel collection.</p>
+            <p class="price">R79.99</p>
+            <a href="#" class="button">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Gourmet Chocolate Gift Box</h3>
+            <p>Perfect for gifting, our gourmet chocolate box is a sweet treat for the holidays.</p>
+            <p class="price">R9.99</p>
+            <a href="#" class="button">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="promotion-banner">
+        🎄 Special Holiday Offer: Get 20% off all Christmas items! Use code HOLIDAY20 at checkout. 🎄
+    </div>
+
+</div>
+
+</body>
+</html>

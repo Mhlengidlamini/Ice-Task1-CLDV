@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ABCRetail.ViewModel.CustomerViewModel>
+
+<h1>Customers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td>@customer.Address</td>
+                <td>@customer.PhoneNumber</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@customer.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@customer.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@customer.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="@Url.Action("Create")">Create New </a>
+
+                
